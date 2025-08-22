@@ -54,6 +54,7 @@ public abstract class Cuenta implements Imprimible{
 		return consecutivo;
 	}//getConsecutivo
 
+	@Override
 	public int getNumeroCuenta() {
 		return numeroCuenta;
 	}//getNumeroCuenta
