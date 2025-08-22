@@ -1,5 +1,5 @@
 # Prueba Técnica BackEnd
 
-Prueba Técnica BackEnd
-
-Favor de leer los pasos a seguir en el archivo Instrucciones.md
+Número de Cohorte: 57
+Fecha y hora: 22 de Agosto 2025, 10:13 AM
+Nombre: Carolina Guadalupe Ortiz Romero
