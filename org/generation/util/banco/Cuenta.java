@@ -1,13 +1,13 @@
 package org.generation.util.banco;
 
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
 import org.generation.util.Imprimible;
 
 public abstract class Cuenta implements Imprimible{
+	
 	//Los números de cuenta del banco iniciarán después de 1000
 	private static int consecutivo=1000; 
 	protected double saldo;
@@ -23,21 +23,24 @@ public abstract class Cuenta implements Imprimible{
      * @param nombreBanco String - Nombre del banco 
     */
 	
-	public Cuenta(double saldo, String numeroCliente, Date fechaApertura, 
-													String nombreCliente) {
+	public Cuenta(double saldo, String numeroCliente, Date fechaApertura, String nombreCliente) {
 	    this.saldo = saldo;
 	    Cuenta.consecutivo++;
 	    this.numeroCuenta = Cuenta.consecutivo;
 	    this.setNombreCliente(nombreCliente);
 		this.numeroCliente = numeroCliente;
+		
 		if (numeroCliente.equals("0")){ //Se genera un número de cliente aleatorio
 			this.numeroCliente =Integer.toString(Math.abs(new Random().nextInt()));
 	    }//if numCliente.equals
+		
 		this.fechaApertura = fechaApertura;
 	}//constructor
+	
 	public Cuenta(double saldo) {
 		this.saldo=saldo;
 	}//constructor
+	
 	//Los métodos abstract deben ser implementados en la clase que hereda
 	public abstract double retiro(double cantidad); 
 	public abstract double deposito(double cantidad);
